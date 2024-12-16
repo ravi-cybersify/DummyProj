@@ -1,27 +1,73 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/lib/Navbar";
-import About from "./components/section/About";
-import Contact from "./components/section/Contact";
-import Home from "./components/section/Home";
-import Login from "./components/section/Login";
-import Services from "./components/section/Services";
 import Footer from "./components/lib/Footer";
+import { lazy, Suspense } from "react";
+const Login = lazy(() => import("./components/section/Login"));
+const Register = lazy(() => import("./components/section/Register"));
+const Home = lazy(() => import("./components/section/Home"));
+const About = lazy(() => import("./components/section/About"));
+const Services = lazy(() => import("./components/section/Services"));
+const Contact = lazy(() => import("./components/section/Contact"));
 
 function App() {
+  const location = useLocation();
+  const endPath = location.pathname.split("/").filter(Boolean)[0];
+  // console.log('path name', endPath)
+
   return (
-    <div className="App">
-       <Navbar />
+    <div className="">
+      
+          <Navbar />
+     
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/services" element={<Services />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route
+          path="/services"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Services />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/about"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <About />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/contact"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Contact />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/login"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Login />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/register"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Register />
+            </Suspense>
+          }
+        ></Route>
       </Routes>
 
-     <Footer />
+      {endPath !== "login" &&
+        endPath !== "register" &&
+        endPath !== "contact" && <Footer />}
     </div>
   );
 }

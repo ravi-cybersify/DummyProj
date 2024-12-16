@@ -1,39 +1,48 @@
-import React from 'react'
+import React from "react";
 import Button from "../components/lib/Button";
-import { IoPlaySharp } from "react-icons/io5";
 
 const FirstAbout = () => {
   return (
-    <div className="flex justify-evenly items-center mx-12 my-12">
-      <div className="rounded">
-        <img src="./images/security.jpg" alt="security" srcset="" className="rounded-2xl" />
-      </div>
-      <div className="w-[420px] text-left flex flex-col gap-7">
-        <p className="text-4xl font-semibold">About Security and our company</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          numquam omnis doloribus expedita, sit quis?
-        </p>
-        <ul className="list-disc ml-5">
-            <li style={{ "::marker": "color: red" }}> Grow your bussiness the right ways</li>
-            <li style={{ "::marker": "color: red" }}>Helping you to get better</li>
-            <li style={{ "::marker": "color: red" }}>Grow your bussiness the right ways</li>
-        </ul>
-        <div className="flex gap-5">
-        <Button
-            name="Get Started"
-            navClassName="bg-[#00aeef] text-white text-lg font-semibold px-8 py-2 rounded-3xl tracking-wide"
+    <div className="">
+      <div className="flex justify-evenly items-center mx-12 mt-28 mb-12">
+        <div className="w-[570px] text-left flex flex-col gap-7">
+          <p className="text-4xl font-semibold">Our Story</p>
+          <p>
+            Cybersecurity is a major endeavor in the IT industry. There are a
+            number of professional certifications given for cybersecurity
+            training and expertise.[1] Although billions of dollars are spent
+            annually on cybersecurity, no computer or network is immune from
+            attacks or can be considered completely secure. Lorem, ipsum dolor
+            sit amet consectetur adipisicing elit. Beatae maxime debitis
+            voluptatibus.
+          </p>
+          <p>
+            The single most expensive loss due to a cybersecurity exploit was
+            the ILOVEYOU or Love Bug email worm of 2000, which cost an estimated
+            10 billion dollars Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Esse commodi quaerat pariatur omnis culpa enim
+            sint quia accusamus maxime placeat!
+          </p>
+        </div>
+
+        <div className="rounded">
+          <img
+            src="./images/coluge hand.jpg"
+            alt="security"
+            srcSet=""
+            className="rounded-2xl w-[500px] h-80"
           />
-
-            <div className="flex gap-2 items-center">
-                <p className="border border-2 border-black rounded-full flex items-center  "><span className="px-2 py-2"><IoPlaySharp size={20} /></span></p>
-                <span>How we works</span>
-            </div>
-
         </div>
       </div>
+      <p className="mx-40">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a,
+        tenetur laborum cum iusto nihil consequatur aliquid autem commodi
+        blanditiis qui. Voluptatem doloremque dignissimos laboriosam beatae!
+        Temporibus sit, voluptates, excepturi vero consequuntur minus cupiditate
+        porro dicta possimus consequatur iure debitis.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default FirstAbout
+export default FirstAbout;

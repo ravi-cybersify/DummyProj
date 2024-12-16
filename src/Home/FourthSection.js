@@ -6,7 +6,7 @@ const FourthSection = () => {
   return (
     <div className="flex justify-evenly items-center mx-12 my-12">
       <div className="rounded">
-        <img src="./images/security.jpg" alt="security" srcset="" className="rounded-2xl" />
+        <img src="./images/security.jpg" alt="security" srcSet="" className="rounded-2xl" />
       </div>
       <div className="w-[420px] text-left flex flex-col gap-7">
         <p className="text-4xl font-semibold">Our Commitment to Client Sastisfaction</p>

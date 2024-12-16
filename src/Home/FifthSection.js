@@ -7,7 +7,7 @@ import { SiSecurityscorecard } from 'react-icons/si'
 const FifthSection = () => {
   return (
     <div className="w-full  my-28 flex flex-col gap-12">
-    <div className="w-[920px] mx-80 flex flex-col gap-5">
+    <div className="w-[920px] mx-80 flex flex-col gap-5 text-center">
     <h1 className="text-5xl font-semibold ">Our Promise</h1>
     <p className="text-lg text-[#4f4f4f]">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique
