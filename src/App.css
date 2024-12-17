@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+.react-calendar{
+  border: none !important;
+}
+.react-calendar__tile--active{
+  border-radius: 50% !important;
+  background: #00a2fe;
+}
+.react-calendar__tile--now{
+  border-radius: 50% !important;
+  /* background-color: rgb(250, 249, 249) !important; */
+  /* background: rgb(250, 249, 249) !important; */
+  color: #00a2fe;
+}
+.react-calendar__tile {
+  padding: 13px 6.6667px !important;
+}

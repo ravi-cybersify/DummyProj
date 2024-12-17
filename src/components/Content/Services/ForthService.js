@@ -1,10 +1,11 @@
 import React from 'react'
-import Button from '../components/lib/Button'
+import Button from '../../lib/Button'
 import { RiVerifiedBadgeFill } from "react-icons/ri";
+import Image from '../../lib/Image';
 
 const ForthService = () => {
   return (
-    <div className="flex justify-evenly items-center mx-12 my-28">
+    <div className="flex justify-evenly items-center mx-20 my-28">
       <div className="w-[570px] text-left flex flex-col gap-7">
         <p className="text-4xl font-semibold">
           Our Approach
@@ -42,11 +43,9 @@ const ForthService = () => {
       </div>
 
       <div className="rounded">
-        <img
-          src="./images/protect.avif"
-          alt="security"
-          srcSet=""
-          className="rounded-tr-3xl rounded-bl-3xl w-[500px] h-80 "
+        <Image
+          srcName="./images/protect.avif"
+         
         />
       </div>
     </div>

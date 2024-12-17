@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../components/lib/Card'
+import Card from '../../lib/Card'
 import { CiLock } from 'react-icons/ci'
 
 const ThirdService = () => {
@@ -18,60 +18,70 @@ const ThirdService = () => {
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Secure Payment & Froud Detections"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="IT Detective Services & Scam Recovery"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="E-commerce Solution & Transaction Protect"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Bussiness SEO & Digital Visibility"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Inventory Management System"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Inventory Management System"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Inventory Management System"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Inventory Management System"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Inventory Management System"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />
        <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="Inventory Management System"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='pl-5 pr-12 py-5 bg-gray-50 shadow-md flex flex-col gap-2 items-left text-left '
         />

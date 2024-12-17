@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../components/lib/Card'
+import Card from '../../lib/Card'
 import { MdSecurity } from 'react-icons/md'
 import { CiLock } from 'react-icons/ci'
 import { SiSecurityscorecard } from 'react-icons/si'
@@ -18,23 +18,23 @@ const FifthSection = () => {
 
     <div className="flex gap-5 px-40">
       <Card
-        icon={<CiLock size={28} color="#00aeef" />}
-        iconClassName = 'pt-3'
+        icon={<CiLock size={20} color="#00aeef" />}
         name="Expert Guidance"
+        paraClassName='text-2xl py-2'
         text="Leverage our teams cybersecurity solutions customers get business."
         cardClassName='px-5 py-5 shadow-md flex flex-row gap-4 text-left'
       />
       <Card
-        icon={<MdSecurity size={28} color="#00aeef" />}
-        iconClassName = 'pt-3'
+        icon={<MdSecurity size={20} color="#00aeef" />}
+        paraClassName='text-2xl py-2'
         name="Hassle-Free Management"
         text="We take care of everything solutions customers get a clearly ."
         cardClassName='px-5 py-5 shadow-md flex flex-row gap-4 text-left'
       />
       <Card
-        icon={<SiSecurityscorecard size={28} color="#00aeef" />}
-        iconClassName = 'pt-3'
+        icon={<SiSecurityscorecard size={20} color="#00aeef" />}
         name="Expert Guidance"
+        paraClassName='text-2xl py-2'
         text="With Net Access cybersecurity solutions customers get a clearly."
         cardClassName='px-5 py-5 shadow-md flex flex-row gap-4 text-left'
       />

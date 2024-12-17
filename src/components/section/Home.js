@@ -1,11 +1,12 @@
 import React from "react";
-import FirstSection from "../../Home/FirstSection";
-import SecondSection from "../../Home/SecondSection";
-import ThirdSection from "../../Home/ThirdSection";
-import FourthSection from "../../Home/FourthSection";
-import FifthSection from "../../Home/FifthSection";
-import Sixth from "../../Home/Sixth";
-import SeventhSection from "../../Home/SeventhSection";
+// import FirstSection from "../../Home/FirstSection";
+import FirstSection from "../Content/Home/FirstSection"
+import SecondSection from "../Content/Home/SecondSection";
+import ThirdSection from "../Content/Home/ThirdSection";
+import FourthSection from "../Content/Home/FourthSection";
+import FifthSection from "../Content/Home/FifthSection";
+import Sixth from "../Content/Home/Sixth";
+import SeventhSection from "../Content/Home/SeventhSection";
 
 
 const Home = () => {

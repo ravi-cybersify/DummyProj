@@ -1,8 +1,8 @@
 import React from 'react'
-import FirstSection from '../../Services/FirstSection'
-import SecondService from '../../Services/SecondService'
-import ThirdService from '../../Services/ThirdService'
-import ForthService from '../../Services/ForthService'
+import FirstSection from '../Content/Services/FirstSection'
+import SecondService from '../Content/Services/SecondService'
+import ThirdService from '../Content/Services/ThirdService'
+import ForthService from '../Content/Services/ForthService'
 
 const Services = () => {
   return (

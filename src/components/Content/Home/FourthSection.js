@@ -1,14 +1,14 @@
 import React from "react";
-import Button from "../components/lib/Button";
+import Button from "../../lib/Button";
 import { IoPlaySharp } from "react-icons/io5";
+import Image from "../../lib/Image";
 
 const FourthSection = () => {
   return (
     <div className="flex justify-evenly items-center mx-12 my-12">
-      <div className="rounded">
-        <img src="./images/security.jpg" alt="security" srcSet="" className="rounded-2xl" />
-      </div>
-      <div className="w-[420px] text-left flex flex-col gap-7">
+      <Image srcName="./images/security.jpg" />
+    
+      <div className="w-[520px] text-left flex flex-col gap-7">
         <p className="text-4xl font-semibold">Our Commitment to Client Sastisfaction</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium

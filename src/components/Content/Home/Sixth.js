@@ -1,9 +1,9 @@
 import React from 'react'
-import MainCard from '../components/lib/MainCard'
+import MainCard from '../../lib/MainCard'
 
 const Sixth = () => {
   return (
-    <div className=''>
+    <div className='text-center'>
       <h1 className='text-4xl font-semibold text-center'>Top Skilled experts</h1>
       <div className="flex gap-4 justify-center">
         <MainCard image='./images/Priya-Yadav.png' name='Priya Yadav' text='PROJECT MANAGER' />

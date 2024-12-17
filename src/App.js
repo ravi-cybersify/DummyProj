@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/lib/Navbar";
 import Footer from "./components/lib/Footer";
 import { lazy, Suspense } from "react";
+import SimilarFooter from "./components/lib/SimilarFooter";
 const Login = lazy(() => import("./components/section/Login"));
 const Register = lazy(() => import("./components/section/Register"));
 const Home = lazy(() => import("./components/section/Home"));
@@ -12,14 +13,12 @@ const Contact = lazy(() => import("./components/section/Contact"));
 
 function App() {
   const location = useLocation();
-  const endPath = location.pathname.split("/").filter(Boolean)[0];
-  // console.log('path name', endPath)
+  const endPath = location.pathname;
+  console.log('path name', endPath)
 
   return (
     <div className="">
-      
-          <Navbar />
-     
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -65,9 +64,9 @@ function App() {
         ></Route>
       </Routes>
 
-      {endPath !== "login" &&
-        endPath !== "register" &&
-        endPath !== "contact" && <Footer />}
+      {endPath !== '/' && endPath !== "/login" && endPath !== "/register" && <SimilarFooter />}
+
+      {endPath !== "/login" && endPath !== "/register" && <Footer />}
     </div>
   );
 }

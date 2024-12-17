@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from "../components/lib/Button";
+import Button from "../../lib/Button";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const FirstSection = () => {

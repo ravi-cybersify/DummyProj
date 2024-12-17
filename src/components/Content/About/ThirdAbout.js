@@ -1,5 +1,5 @@
 import React from "react";
-import MainCard from "../components/lib/MainCard";
+import MainCard from "../../lib/MainCard";
 
 const ThirdAbout = () => {
   return (

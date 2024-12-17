@@ -1,14 +1,12 @@
 import React from "react";
+import Image from "../../lib/Image";
 
 const SecondService = () => {
   return (
     <div className="flex justify-evenly items-center mx-12 my-28">
       <div className="rounded">
-        <img
-          src="./images/secure365.webp"
-          alt="security"
-          srcSet=""
-          className="rounded-tr-3xl rounded-bl-3xl w-[500px] h-80"
+        <Image
+          srcName="./images/secure365.webp"
         />
       </div>
       <div className="w-[570px] text-left flex flex-col gap-7">

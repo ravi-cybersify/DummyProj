@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/lib/Card";
+import Card from "../../lib/Card";
 import { CiLock } from "react-icons/ci";
 import { SiSecurityscorecard } from "react-icons/si";
 import { MdSecurity } from "react-icons/md";
@@ -20,24 +20,28 @@ const ThirdSection = () => {
         <Card
           icon={<CiLock size={28} color="#00aeef" />}
           name="CyberScurity Solution"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
         />
         <Card
           icon={<MdSecurity size={28} color="#00aeef" />}
           name="CyberScurity Solution"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
         />
         <Card
           icon={<SiSecurityscorecard size={28} color="#00aeef" />}
           name="CyberScurity Solution"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
         />
         <Card
           icon={<MdSecurity size={28} color="#00aeef"/>}
           name="CyberScurity Solution"
+          paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
           cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
         />
