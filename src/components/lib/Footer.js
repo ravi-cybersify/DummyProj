@@ -4,7 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-800">
+    <div className="w-full text-white bg-cover bg-center " style={{backgroundImage:`url('./images/footer.avif')`}}>
       <div className="flex justify-around text-white px-5 py-5">
         <div className="w-96 text-left flex flex-col gap-4">
           <div className="text-white">

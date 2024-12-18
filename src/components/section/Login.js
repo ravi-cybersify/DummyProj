@@ -5,7 +5,7 @@ const Login = () => {
 
 
   return (
-    <div className="flex justify-evenly items-center">
+    <div className="flex justify-evenly items-center pt-28">
 
       <div className="rounded">
         <img

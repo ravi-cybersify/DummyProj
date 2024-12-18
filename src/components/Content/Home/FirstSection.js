@@ -4,7 +4,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const FirstSection = () => {
   return (
-       <div className="flex justify-evenly mx-40  "> 
+       <div className="flex justify-evenly mx-40 pt-20 "> 
       
       <div className=" text-left flex flex-col gap-3 mt-20">
         <h2 className="text-4xl text-[#4f4f4f]">Expert Bussiness</h2>

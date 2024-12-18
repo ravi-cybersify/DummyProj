@@ -3,7 +3,7 @@ import Form from '../lib/Form'
 
 const Register = () => {
   return (
-    <div className="flex justify-evenly items-center">
+    <div className="flex justify-evenly items-center pt-28">
 
       <div className="rounded-3xl w-96 bg-gray-200 px-12 pt-5 pb-8 ml-20">
         <h1 className="text-2xl font-bold">Register Your Account</h1>

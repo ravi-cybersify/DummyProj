@@ -1,14 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [active, setActive] = useState("home");
+  const location = useLocation();
+  const pathName = location.pathname;
+
+  const [navBg, setNavBg] = useState(false);
+
+  const changeNavBg = () => {
+   window.scrollY >= 240 ? setNavBg(true) : setNavBg(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBg);
+    return () => {
+      window.removeEventListener('scroll', changeNavBg);
+    }
+  }, [])
 
   return (
-    <div className="flex justify-between items-center my-3 px-40 ">
+    <div
+      className={`fixed w-full flex justify-between items-center px-36  ${
+        pathName !== "/" ? navBg ?"bg-white" : "bg-transparent" : "bg-white"
+      } `}
+    >
       <div className="">
-        <img src="./images/logo.png" alt="logo" className="w-40 h-18" />
+        <img
+          src={`${
+            pathName === "/" ? "./images/logo.png" : "./images/logor.png"
+          }`}
+          alt="logo"
+          className="w-40 h-18"
+        />
       </div>
       <div className="flex items-center gap-7">
         <ul className="flex gap-7">
@@ -16,9 +40,8 @@ const Navbar = () => {
             <li>
               <button
                 type="button"
-                onClick={() => setActive("home")}
                 className={`${
-                  active === "home" ? "text-[#397193]" : "text-gray-400"
+                  pathName === "/" ? "text-blue-500" : "text-gray-400"
                 }`}
               >
                 HOME
@@ -29,9 +52,8 @@ const Navbar = () => {
             <li>
               <button
                 type="button"
-                onClick={() => setActive("services")}
                 className={`${
-                  active === "services" ? "text-[#397193]" : "text-gray-400"
+                  pathName === "/services" ? "text-blue-500" : "text-gray-400"
                 }`}
               >
                 SERVICES
@@ -42,9 +64,8 @@ const Navbar = () => {
             <li>
               <button
                 type="button"
-                onClick={() => setActive("about")}
                 className={`${
-                  active === "about" ? "text-[#397193]" : "text-gray-400"
+                  pathName === "/about" ? "text-blue-500" : "text-gray-400"
                 }`}
               >
                 ABOUT US
@@ -55,9 +76,8 @@ const Navbar = () => {
             <li>
               <button
                 type="button"
-                onClick={() => setActive("contact")}
                 className={`${
-                  active === "contact" ? "text-[#397193]" : "text-gray-400"
+                  pathName === "/contact" ? "text-blue-500" : "text-gray-400"
                 }`}
               >
                 CONTACT US
@@ -68,9 +88,8 @@ const Navbar = () => {
             <li>
               <button
                 type="button"
-                onClick={() => setActive("login")}
                 className={`${
-                  active === "login" ? "text-[#397193]" : "text-gray-400"
+                  pathName === "/login" ? "text-blue-500" : "text-gray-400"
                 }`}
               >
                 LOGIN
@@ -79,19 +98,28 @@ const Navbar = () => {
           </Link>
         </ul>
         <Link to={"/register"}>
-        <button
-          type="button"
-          onClick={() => setActive("register")}
-          className={`${
-            active === "register" ? "text-gray-400" : "text-white"
-          } bg-[#397193] rounded-2xl px-3 py-1 flex items-center gap-1`}
-       
-        >
-          SIGN UP{" "}
-          <span className="bg-white rounded-full text-[#397193] p-1 ">
-            <FiArrowUpRight size={14} />
-          </span>
-        </button>
+          <button
+            type="button"
+            className={`${
+              (pathName === "/register" ||
+                pathName === "/login" ||
+                pathName === "/") ?
+              "text-white bg-[#00aeef]" : "bg-white"
+            }  rounded-2xl border border-[#00aeef] px-3 py-1 flex items-center gap-1`}
+          >
+            SIGN UP{" "}
+            <span
+              className={`${
+                pathName === "/about" ||
+                pathName === "/contact" ||
+                pathName === "/services"
+                  ? "bg-[#397193] text-white rounded-full"
+                  : "bg-white rounded-full text-[#397193]"
+              }`}
+            >
+              <FiArrowUpRight size={14} />
+            </span>
+          </button>
         </Link>
       </div>
     </div>

@@ -34,7 +34,7 @@ const [user,setUser]=useState({
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 mb-4 mt-10">
       <div className="flex flex-col gap-1">
-        <label htmlFor="userName" className="text-left font-semibold">
+        <label htmlFor="userName" className="text-left font-semibold pl-1">
           Username:{" "}
         </label>
         <input
@@ -51,7 +51,7 @@ const [user,setUser]=useState({
       {endPath === "register" && (
         <>
           <div className="flex flex-col gap-1">
-            <label htmlFor="email" className="text-left font-semibold">
+            <label htmlFor="email" className="text-left font-semibold pl-1">
               Email:{" "}
             </label>
             <input
@@ -67,7 +67,7 @@ const [user,setUser]=useState({
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label htmlFor="phone" className="text-left font-semibold">
+            <label htmlFor="phone" className="text-left font-semibold pl-1">
               Phone:{" "}
             </label>
             <input
@@ -86,7 +86,7 @@ const [user,setUser]=useState({
       )}
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="password" className="text-left font-semibold">
+        <label htmlFor="password" className="text-left font-semibold pl-1">
           Password:{" "}
         </label>
         <input
@@ -100,7 +100,7 @@ const [user,setUser]=useState({
           }
           className="rounded-3xl px-4 py-1"
         />
-        <p className="text-right">Forget password?</p>
+        <p className="text-right text-blue-600 cursor-pointer">Forget password?</p>
       </div>
       <Button
       name =

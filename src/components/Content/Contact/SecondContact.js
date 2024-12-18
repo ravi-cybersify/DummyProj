@@ -21,7 +21,7 @@ const SecondContact = () => {
 
   return (
     <div className="flex justify-evenly items-center">
-      <div className="rounded  w-[600px] ml-28">
+      <div className="rounded  w-[600px] ml-20">
         <h1 className="text-3xl font-semibold mb-8">How to Reach Us</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
@@ -57,7 +57,7 @@ const SecondContact = () => {
         </div>
       </div>
 
-      <div className="rounded-3xl w-[600px] px-12 pt-5 pb-8">
+      <div className="rounded-3xl w-[600px] px-12 pt-5 pb-8 mt-4">
         <h1 className="text-2xl font-bold">Contact Us</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-5">
           <input
