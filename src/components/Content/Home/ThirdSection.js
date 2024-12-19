@@ -22,28 +22,28 @@ const ThirdSection = () => {
           name="CyberScurity Solution"
           paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-          cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
+          cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center'
         />
         <Card
           icon={<MdSecurity size={28} color="#00aeef" />}
           name="CyberScurity Solution"
           paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-          cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
+          cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center'
         />
         <Card
           icon={<SiSecurityscorecard size={28} color="#00aeef" />}
           name="CyberScurity Solution"
           paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-          cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
+          cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center'
         />
         <Card
           icon={<MdSecurity size={28} color="#00aeef"/>}
           name="CyberScurity Solution"
           paraClassName='text-2xl py-2'
           text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-          cardClassName='px-5 py-5 shadow-md flex flex-col gap-2 items-center'
+          cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center'
         />
       </div>
     </div>

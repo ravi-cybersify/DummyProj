@@ -25,7 +25,7 @@ function App() {
         <Route
           path="/services"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>🌀Loading...</div>}>
               <Services />
             </Suspense>
           }
@@ -33,7 +33,7 @@ function App() {
         <Route
           path="/about"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>🌀Loading...</div>}>
               <About />
             </Suspense>
           }
@@ -41,7 +41,7 @@ function App() {
         <Route
           path="/contact"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>🌀Loading...</div>}>
               <Contact />
             </Suspense>
           }
@@ -49,7 +49,7 @@ function App() {
         <Route
           path="/login"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>🌀Loading...</div>}>
               <Login />
             </Suspense>
           }
@@ -57,7 +57,7 @@ function App() {
         <Route
           path="/register"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>🌀Loading...</div>}>
               <Register />
             </Suspense>
           }

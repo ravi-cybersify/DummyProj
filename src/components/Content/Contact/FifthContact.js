@@ -13,21 +13,21 @@ const FifthContact = () => {
         name="Our Vision"
         paraClassName='text-2xl py-2'
         text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-        cardClassName="pl-5 pr-12 py-10 bg-gray-50 shadow-md flex flex-col gap-2 items-center text-center "
+        cardClassName="pl-5 pr-12 py-10 bg-gray-50 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center text-center "
       />
       <Card
         icon={<GoGoal size={28} color="#00aeef" />}
         name="Our Mission"
         paraClassName='text-2xl py-2'
         text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-        cardClassName="pl-5 pr-12 py-10 bg-gray-50 shadow-md flex flex-col gap-2 items-center text-center "
+        cardClassName="pl-5 pr-12 py-10 bg-gray-50 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center text-center "
       />
       <Card
         icon={<MdHistoryEdu size={28} color="#00aeef" />}
         name="Our History"
         paraClassName='text-2xl py-2'
         text="With Net Access cybersecurity solutions customers get a clearly defined cyber-strategy for their business."
-        cardClassName="pl-5 pr-12 py-10 bg-gray-50 shadow-md flex flex-col gap-2 items-center text-center "
+        cardClassName="pl-5 pr-12 py-10 bg-gray-50 shadow-lg hover:shadow-xl flex flex-col gap-2 items-center text-center "
       />
     </div>
     </div>

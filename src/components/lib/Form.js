@@ -4,12 +4,8 @@ import { useLocation } from "react-router-dom";
 
 const Form = () => {
   const location = useLocation();
-  const endPath = location.pathname.split("/").filter(Boolean)[0];
+  const endPath = location.pathname.split("/").pop();
 
-//   const [userName, setUserName] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [phone, setPhone] = useState(null);
-//   const [email, setEmail] = useState("");
 const [user,setUser]=useState({
     username:"",
     password:"",
@@ -17,11 +13,12 @@ const [user,setUser]=useState({
     email:"",
 })
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // for(let i in user){
-    //     console.log(user[i] ,"ele")
-    // }
+    for(let i in user){
+        console.log(user[i] ,"ele")
+    }
     setUser((prevState) => ({
         ...prevState, 
         username: '',

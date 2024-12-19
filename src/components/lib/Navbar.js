@@ -5,19 +5,22 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const pathName = location.pathname;
-
   const [navBg, setNavBg] = useState(false);
 
-  const changeNavBg = () => {
-   window.scrollY >= 240 ? setNavBg(true) : setNavBg(false);
-  }
-
   useEffect(() => {
+    const changeNavBg = () => {
+      setNavBg(window.scrollY >= 24);
+    };
     window.addEventListener('scroll', changeNavBg);
     return () => {
       window.removeEventListener('scroll', changeNavBg);
     }
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [pathName]); 
+
 
   return (
     <div

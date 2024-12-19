@@ -22,21 +22,21 @@ const FifthSection = () => {
         name="Expert Guidance"
         paraClassName='text-2xl py-2'
         text="Leverage our teams cybersecurity solutions customers get business."
-        cardClassName='px-5 py-5 shadow-md flex flex-row gap-4 text-left'
+        cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-row gap-4 text-left'
       />
       <Card
         icon={<MdSecurity size={20} color="#00aeef" />}
         paraClassName='text-2xl py-2'
         name="Hassle-Free Management"
         text="We take care of everything solutions customers get a clearly ."
-        cardClassName='px-5 py-5 shadow-md flex flex-row gap-4 text-left'
+        cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-row gap-4 text-left'
       />
       <Card
         icon={<SiSecurityscorecard size={20} color="#00aeef" />}
         name="Expert Guidance"
         paraClassName='text-2xl py-2'
         text="With Net Access cybersecurity solutions customers get a clearly."
-        cardClassName='px-5 py-5 shadow-md flex flex-row gap-4 text-left'
+        cardClassName='px-5 py-5 shadow-lg hover:shadow-xl flex flex-row gap-4 text-left'
       />
     
     </div>
