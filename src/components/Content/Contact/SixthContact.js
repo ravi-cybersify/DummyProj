@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../lib/Button";
 import CommonComp from "../../lib/CommonComp";
 
 const SixthContact = () => {

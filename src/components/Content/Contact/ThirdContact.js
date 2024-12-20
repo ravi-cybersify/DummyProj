@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { IoMdTime } from "react-icons/io";
@@ -31,7 +31,7 @@ const ThirdContact = () => {
         <hr />
        <div className=" shadow-lg px-4 py-3">
        <h1 className="text-lg font-semibold pl-3">Select a Date & Time</h1>
-       <Calendar onChange={onChange} value={value} style="border:none;" />
+       <Calendar onChange={onChange} value={value} />
        </div>
       </div>
          

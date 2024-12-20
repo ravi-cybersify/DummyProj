@@ -11,9 +11,9 @@ const FourthContact = () => {
           width="710"
           height="450"
         //   style="border:0;"
-          allowfullscreen=""
+          // allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          // referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
 

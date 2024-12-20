@@ -1,31 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
+import { removeUser } from "../../Redux/userSlices";
 
 const Navbar = () => {
   const location = useLocation();
   const pathName = location.pathname;
+  const userData = useSelector((state) => state.Users.user);
+  // console.log(userData, "userData");
+  const dispatch = useDispatch();
+
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
     const changeNavBg = () => {
       setNavBg(window.scrollY >= 24);
     };
-    window.addEventListener('scroll', changeNavBg);
+    window.addEventListener("scroll", changeNavBg);
     return () => {
-      window.removeEventListener('scroll', changeNavBg);
-    }
-  }, [])
+      window.removeEventListener("scroll", changeNavBg);
+    };
+  }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0); 
-  }, [pathName]); 
+    window.scrollTo(0, 0);
+  }, [pathName]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("userLogged");
+    dispatch(removeUser());
+  };
 
   return (
     <div
       className={`fixed w-full flex justify-between items-center px-36  ${
-        pathName !== "/" ? navBg ?"bg-white" : "bg-transparent" : "bg-white"
+        pathName !== "/" ? (navBg ? "bg-white" : "bg-transparent") : "bg-white"
       } `}
     >
       <div className="">
@@ -51,7 +62,7 @@ const Navbar = () => {
               </button>
             </li>
           </Link>
-          <Link to={"/services"}>
+          <Link to={userData?.username ? "/services" : "/login"}>
             <li>
               <button
                 type="button"
@@ -63,7 +74,7 @@ const Navbar = () => {
               </button>
             </li>
           </Link>
-          <Link to={"/about"}>
+          <Link to={userData?.username ? "/about" : "/login"}>
             <li>
               <button
                 type="button"
@@ -75,7 +86,7 @@ const Navbar = () => {
               </button>
             </li>
           </Link>
-          <Link to={"/contact"}>
+          <Link to={userData?.username ? "/contact" : "/login"}>
             <li>
               <button
                 type="button"
@@ -87,43 +98,62 @@ const Navbar = () => {
               </button>
             </li>
           </Link>
+
+          {/* username show in navbar */}
+          {userData && (
+            <span className="text-gray-400">{userData.username}</span>
+          )}
+
           <Link to={"/login"}>
             <li>
               <button
                 type="button"
+                onClick={userData && handleLogout}
                 className={`${
-                  pathName === "/login" ? "text-blue-500" : "text-gray-400"
+                  pathName === "/login"
+                    ? "text-blue-500 text-semibold"
+                    : "text-red-600 text-semibold"
                 }`}
               >
-                LOGIN
+                {userData ? (
+                  <span className="border border-red-500 rounded-xl px-3 pb-1 text-gray-400">
+                    LOGOUT
+                  </span>
+                ) : (
+                  "LOGIN"
+                )}
               </button>
             </li>
           </Link>
         </ul>
-        <Link to={"/register"}>
-          <button
-            type="button"
-            className={`${
-              (pathName === "/register" ||
-                pathName === "/login" ||
-                pathName === "/") ?
-              "text-white bg-[#00aeef]" : "bg-white"
-            }  rounded-2xl border border-[#00aeef] px-3 py-1 flex items-center gap-1`}
-          >
-            SIGN UP{" "}
-            <span
+
+        {!userData && (
+          <Link to={"/register"}>
+            <button
+              type="button"
               className={`${
-                pathName === "/about" ||
-                pathName === "/contact" ||
-                pathName === "/services"
-                  ? "bg-[#397193] text-white rounded-full"
-                  : "bg-white rounded-full text-[#397193]"
-              }`}
+                pathName === "/register" ||
+                pathName === "/login" ||
+                pathName === "/"
+                  ? "text-white bg-[#00aeef]"
+                  : "bg-white"
+              }  rounded-2xl border border-[#00aeef] px-3 py-1 flex items-center gap-1`}
             >
-              <FiArrowUpRight size={14} />
-            </span>
-          </button>
-        </Link>
+              SIGN UP{" "}
+              <span
+                className={`${
+                  pathName === "/about" ||
+                  pathName === "/contact" ||
+                  pathName === "/services"
+                    ? "bg-[#397193] text-white rounded-full"
+                    : "bg-white rounded-full text-[#397193]"
+                }`}
+              >
+                <FiArrowUpRight size={14} />
+              </span>
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

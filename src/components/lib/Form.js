@@ -1,31 +1,51 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getUser } from "../../Redux/userSlices";
 
 const Form = () => {
   const location = useLocation();
   const endPath = location.pathname.split("/").pop();
 
-const [user,setUser]=useState({
-    username:"",
-    password:"",
-    phone:'',
-    email:"",
-})
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+    phone: "",
+    email: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    for(let i in user){
-        console.log(user[i] ,"ele")
+    // for(let i in user){
+    //     console.log(user[i] ,"ele")
+    // }
+    if (endPath === "register") {
+      localStorage.setItem("user", JSON.stringify(user));
     }
+
+    if (endPath === "login") {
+      const userInfo = JSON.parse(localStorage.getItem("user"));
+      if (
+        user.username === userInfo.username &&
+        user.password === userInfo.password
+      ) {
+       
+        dispatch(getUser({user}));
+        navigate("/");
+      }
+    }
+
     setUser((prevState) => ({
-        ...prevState, 
-        username: '',
-        password: '',
-        phone: '',
-        email: '',
-      }))
+      ...prevState,
+      username: "",
+      password: "",
+      phone: "",
+      email: "",
+    }));
   };
 
   return (
@@ -38,7 +58,7 @@ const [user,setUser]=useState({
           value={user.username}
           onChange={(e) =>
             setUser((prevState) => ({
-              ...prevState, 
+              ...prevState,
               username: e.target.value,
             }))
           }
@@ -56,7 +76,7 @@ const [user,setUser]=useState({
               value={user.email}
               onChange={(e) =>
                 setUser((prevState) => ({
-                  ...prevState, 
+                  ...prevState,
                   email: e.target.value,
                 }))
               }
@@ -72,7 +92,7 @@ const [user,setUser]=useState({
               value={user.phone}
               onChange={(e) =>
                 setUser((prevState) => ({
-                  ...prevState, 
+                  ...prevState,
                   phone: e.target.value,
                 }))
               }
@@ -91,19 +111,18 @@ const [user,setUser]=useState({
           value={user.password}
           onChange={(e) =>
             setUser((prevState) => ({
-              ...prevState, 
+              ...prevState,
               password: e.target.value,
             }))
           }
           className="rounded-3xl px-4 py-1"
         />
-        <p className="text-right text-blue-600 cursor-pointer">Forget password?</p>
+        <p className="text-right text-blue-600 cursor-pointer">
+          Forget password?
+        </p>
       </div>
       <Button
-      name =
-       {
-        endPath === 'register' ?  "Signup" :  "Login"
-       }
+        name={endPath === "register" ? "Signup" : "Login"}
         navClassName="bg-[#00aeef] text-white w-full text-md font-semibold mt-2 px-2 py-1 rounded-3xl tracking-wide"
       />
     </form>
