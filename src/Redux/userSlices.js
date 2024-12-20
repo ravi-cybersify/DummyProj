@@ -5,6 +5,7 @@ const initialState = {
     Users: saveUserData || []
 }
 
+
 const userSlices = createSlice({
     name:'Users',
     initialState,
@@ -13,6 +14,7 @@ const userSlices = createSlice({
             state.Users = action.payload
             localStorage.setItem('userLogged', JSON.stringify(state));
         },
+
        removeUser(state,action){
          state.Users = [] ;
        }

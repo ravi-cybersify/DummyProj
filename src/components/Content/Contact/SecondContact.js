@@ -130,7 +130,7 @@ const SecondContact = () => {
               }))
             }
             placeholder="Your message..."
-            className="px-3 py-4 rounded-3xl w-full h-20 bg-gray-100"
+            className="px-3 py-2 rounded-3xl w-full h-20 bg-gray-100"
           />
           <div className="flex gap-1 ml-2">
             <input type="checkbox" name="" id="" />

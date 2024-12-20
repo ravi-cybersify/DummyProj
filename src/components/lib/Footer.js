@@ -32,24 +32,24 @@ const Footer = () => {
         </div>
         <div className="text-left flex flex-col justify-evenly">
           <h1 className="text-lg font-semibold">Company</h1>
-          <p>About</p>
-          <p>Office</p>
-          <p>License verification</p>
-          <p>Nature</p>
+          <p className="cursor-pointer">About</p>
+          <p className="cursor-pointer">Office</p>
+          <p className="cursor-pointer">License verification</p>
+          <p className="cursor-pointer">Nature</p>
         </div>
         <div className="text-left flex flex-col justify-evenly">
           <h1>Help</h1>
-          <p>Customer Support</p>
-          <p>Delivery Details</p>
-          <p>Terms & Conditions</p>
-          <p>Privacy Policy</p>
+          <p className="cursor-pointer">Customer Support</p>
+          <p className="cursor-pointer">Delivery Details</p>
+          <p className="cursor-pointer">Terms & Conditions</p>
+          <p className="cursor-pointer">Privacy Policy</p>
         </div>
         <div className="text-left flex flex-col justify-evenly">
           <h1>Resources</h1>
-          <p>Free eBooks</p>
-          <p>Tutorial</p>
-          <p>How to- Blog</p>
-          <p>Youtube Playlist</p>
+          <p className="cursor-pointer">Free eBooks</p>
+          <p className="cursor-pointer">Tutorial</p>
+          <p className="cursor-pointer">How to- Blog</p>
+          <p className="cursor-pointer">Youtube Playlist</p>
         </div>
       </div>
 

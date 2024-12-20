@@ -9,7 +9,7 @@ const Navbar = () => {
   const pathName = location.pathname;
   const userData = useSelector((state) => state.Users.user);
   // console.log(userData, "userData");
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
   const [navBg, setNavBg] = useState(false);
 
@@ -112,7 +112,7 @@ const Navbar = () => {
                 className={`${
                   pathName === "/login"
                     ? "text-blue-500 text-semibold"
-                    : "text-red-600 text-semibold"
+                    : "text-gray-400 text-semibold"
                 }`}
               >
                 {userData ? (
@@ -120,7 +120,9 @@ const Navbar = () => {
                     LOGOUT
                   </span>
                 ) : (
-                  "LOGIN"
+                  <span>
+                    LOGIN
+                  </span>
                 )}
               </button>
             </li>

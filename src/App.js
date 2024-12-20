@@ -4,6 +4,7 @@ import Navbar from "./components/lib/Navbar";
 import Footer from "./components/lib/Footer";
 import { lazy, Suspense } from "react";
 import SimilarFooter from "./components/lib/SimilarFooter";
+import { ToastContainer } from "react-toastify";
 // import { useSelector } from "react-redux";
 const Login = lazy(() => import("./components/section/Login"));
 const Register = lazy(() => import("./components/section/Register"));
@@ -70,6 +71,7 @@ function App() {
       {endPath !== '/' && endPath !== "/login" && endPath !== "/register" && <SimilarFooter />}
 
       {endPath !== "/login" && endPath !== "/register" && <Footer />}
+      <ToastContainer />
     </div>
   );
 }
