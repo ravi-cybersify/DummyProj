@@ -7,8 +7,8 @@ import { removeUser } from "../../Redux/userSlices";
 const Navbar = () => {
   const location = useLocation();
   const pathName = location.pathname;
-  const userData = useSelector((state) => state.Users.user);
-  // console.log(userData, "userData");
+  const userData = useSelector((state) => state.Users);
+  console.log(typeof(userData), "userData");
   const dispatch = useDispatch(); 
 
   const [navBg, setNavBg] = useState(false);
@@ -100,7 +100,7 @@ const Navbar = () => {
           </Link>
 
           {/* username show in navbar */}
-          {userData && (
+          {userData?.username && (
             <span className="text-gray-400">{userData.username}</span>
           )}
 
@@ -108,14 +108,14 @@ const Navbar = () => {
             <li>
               <button
                 type="button"
-                onClick={userData && handleLogout}
+                onClick={userData?.username && handleLogout}
                 className={`${
                   pathName === "/login"
                     ? "text-blue-500 text-semibold"
                     : "text-gray-400 text-semibold"
                 }`}
               >
-                {userData ? (
+                {userData?.username ? (
                   <span className="border border-red-500 rounded-xl px-3 pb-1 text-gray-400">
                     LOGOUT
                   </span>
@@ -129,7 +129,7 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        {!userData && (
+        {!userData?.username && (
           <Link to={"/register"}>
             <button
               type="button"

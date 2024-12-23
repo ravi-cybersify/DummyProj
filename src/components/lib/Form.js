@@ -66,7 +66,7 @@ const Form = () => {
           user.username === userInfo.username &&
           user.password === userInfo.password
         ) {
-          dispatch(getUser({ user }));
+          dispatch(getUser({ username:user.username,password:user.password }));
           navigate("/");
         } else {
           toast("Please Enter Correct Username and Password !!", {

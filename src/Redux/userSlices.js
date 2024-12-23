@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const saveUserData = JSON.parse(localStorage.getItem('userLogged'));
+
 const initialState = {
     Users: saveUserData || []
 }
